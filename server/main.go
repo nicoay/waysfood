@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"mytask/database"
+	"os"
 
 	"mytask/pkg/mysql"
 	"mytask/routes"
@@ -32,9 +34,9 @@ func main() {
 
 	routes.RouteInit(e.Group("/api/v1"))
 
-	// PORT := os.Getenv("PORT")
+	PORT := os.Getenv("PORT")
 
-	// fmt.Println("Server is runnning on localhost:" + PORT)
-	// e.Logger.Fatal(e.Start(":" + PORT))
-	e.Logger.Fatal(e.Start("localhost:8080"))
+	fmt.Println("Server is runnning on localhost:" + PORT)
+	e.Logger.Fatal(e.Start(":" + PORT))
+	// e.Logger.Fatal(e.Start("localhost:8080"))
 }
