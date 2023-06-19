@@ -35,7 +35,6 @@ func main() {
 	routes.RouteInit(e.Group("/api/v1"))
 
 	PORT := os.Getenv("PORT")
-
 	fmt.Println("Server is runnning on localhost:" + PORT)
 	e.Logger.Fatal(e.Start(":" + PORT))
 	// e.Logger.Fatal(e.Start("localhost:8080"))
