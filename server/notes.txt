@@ -1,0 +1,23 @@
+For range => sebuah perulangan , memungkinkan Anda mengakses setiap elemen secara berurutan tanpa harus menghitung indeks atau menggunakan perulangan klasik dengan indeks.
+
+map => mengaitkan nilai (value) dengan kunci (key) yang unik
+
+e.Static("/uploads", "./uploads") => untuk mengonfigurasi routing statis, di mana semua file yang berada di direktori ./uploads dapat diakses melalui URL dengan path "/uploads"
+
+
+strings.Split() untuk membagi string token menjadi beberapa bagian berdasarkan delimiter (pemisah) yang diberikan, dalam hal ini spasi (" "). Hasilnya adalah array slice yang berisi bagian-bagian string yang telah dipisahkan.
+
+Misalnya, jika nilai token adalah "Bearer abcdefg12345", maka setelah memanggil strings.Split(token, " "), hasilnya akan menjadi array slice ["Bearer", "abcdefg12345"]. Kemudian, kita mengambil elemen kedua dari array slice tersebut (indeks 1) dengan menggunakan [1], yang menghasilkan string "abcdefg12345". String inilah yang merupakan token yang sebenarnya.
+
+
+
+notes handle env :
+errEnv := godotenv.Load()
+	if errEnv != nil {
+		panic("Failed to load env file")
+	}
+    then called at file jwt.go w this code : var SecretKey = os.Getenv("SECRET_KEY")
+
+create file w ext env then save whats all important (ex secretKey as signedstring for access token)
+example from .env :
+SECRET_KEY=Malchi
