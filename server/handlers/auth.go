@@ -116,11 +116,12 @@ func (h *handlerAuth) Login(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusUnauthorized)
 	}
 	loginResponse := authdto.LoginResponse{
-		Email: user.Email,
-		Token: token,
-		Role:  user.Role,
-		Image: user.Image,
-		ID:    user.ID,
+		Email:    user.Email,
+		Token:    token,
+		Role:     user.Role,
+		Location: user.Location,
+		Image:    user.Image,
+		ID:       user.ID,
 	}
 
 	return c.JSON(http.StatusOK, loginResponse)

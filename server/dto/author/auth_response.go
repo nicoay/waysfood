@@ -6,9 +6,10 @@ type RegResponse struct {
 }
 
 type LoginResponse struct {
-	Email string `gorm:"type: varchar(255)" json:"email"`
-	Token string `gorm:"type: varchar(255)" json:"token"`
-	Role  string `gorm:"type: varchar(255)" json:"role"`
-	Image string `gorm:"type: varchar(255)" json:"image"`
-	ID    int    `json:"id"`
+	Email    string `gorm:"type: varchar(255)" json:"email"`
+	Token    string `gorm:"type: varchar(255)" json:"token"`
+	Role     string `gorm:"type: varchar(255)" json:"role"`
+	Location string `gorm:"type: varchar(255)" json:"location"`
+	Image    string `gorm:"type: varchar(255)" json:"image"`
+	ID       int    `json:"id"`
 }
